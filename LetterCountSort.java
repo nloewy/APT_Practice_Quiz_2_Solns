@@ -5,7 +5,7 @@ public class LetterCountSort{
     private String special;
 
     public String[] sort(String[] list, String specialChars) {
-        special = specialChars;
+        special = specialChars; #assign to instance variable so we can use the specialChars in a helper
         Arrays.sort(list, Comparator.comparing(this::countSpecial).thenComparing(String::compareTo));
         return list;
     }
